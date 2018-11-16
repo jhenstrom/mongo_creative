@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Avatar rating</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="javascripts/avatar.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
+    </head>
+    
+    <body>
+        <div class="main_div">
+            <div class = "top_div">
+                <h1>Mongo Lab</h1>
+                
+                <div class="row">
+                    <div class="column" onclick="openTab('add');" style="background:gray;">
+                    Create an Avater
+                    </div>
+                    <div class="column" onclick="openTab('delete');" style="background:gray;">
+                    Delete an Avater
+                    </div>
+                    <div class="column" onclick="openTab('comment');" style="background:gray;">
+                    Comment on an Avatar
+                    </div>
+                </div>
+                
+                <div id="add" class="containerTab">
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                    <label for="name">Name: </label><input type="text" id="name" placeholder="Name"><br>
+                    <label for="username">Username: </label><input type="text" id="username" placeholder="Name"><br>
+                    <label for="avatar">URL for avatar: </label><input type="text" id="avatar_url" placeholder="Avatar URL"><br>
+                </div>
+                
+                <div class="delete" class="containerTab">
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                    <label for="remove">Remove Avatar by Username: </label><input type="text" id="query" placeholder="Username"><br>
+                </div>
+                
+                <div id="comment" class="containerTab">
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                </div>
+                <br>
+            
+                <button id="postAvatar" class="btn btn-primary">Post Avatar</button>
+                <button id="getAvatars" class="btn btn-primary">Get Comments</button>
+                <button id="deleteAvatar" class="btn btn-primary">Remove Avatar</button>
+                <br>
+                <br>
+                <div id="avatars"></div>
+                
+                <div id="avatar_comments"></div>
+            </div>
+        </div>
+    </body>
+</html>
